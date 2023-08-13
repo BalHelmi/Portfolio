@@ -27,6 +27,17 @@ This project is about to teach AI to play sanke using reinforcement learning wit
 ## Demo
 
 ## Installation
+Create a virtual environment with conda 
+
+```
+conda create -n pysnake_env python=3.10
+```  
+
+Install all dependencies
+```
+conda activate pysnake_env
+pip install -r requirements.txt
+```  
 
 ## Usage
 
