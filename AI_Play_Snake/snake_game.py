@@ -76,7 +76,7 @@ class SnakeGameAI:
         
         """
         # 1. collect input from action
-        self.frame_iteration = +1
+        self.frame_iteration += 1
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
