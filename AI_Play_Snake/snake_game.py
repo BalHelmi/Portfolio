@@ -70,11 +70,10 @@ class SnakeGameAI:
         self.food = Point(x, y)
         if self.food in self.snake:
             self._place_food()
+
         
     def play_step(self, action):
-        """
-        
-        """
+
         # 1. collect input from action
         self.frame_iteration += 1
         for event in pygame.event.get():
@@ -89,7 +88,7 @@ class SnakeGameAI:
         # 3. check if game over
         reward = 0
         game_over = False
-        if self._is_collision() or self.frame_iteration > 100*len(self.snake):
+        if self.is_collision() or self.frame_iteration > 100*len(self.snake):
             game_over = True
             reward = -10
             return reward, game_over, self.score
@@ -108,7 +107,8 @@ class SnakeGameAI:
         # 6. return game over and score
         return reward, game_over, self.score
     
-    def _is_collision(self, point = None):
+
+    def is_collision(self, point = None):
         if point == None:
             point = self.head 
         # hits boundary
@@ -119,6 +119,7 @@ class SnakeGameAI:
             return True
         
         return False
+    
         
     def _update_ui(self):
         self.display.fill(BLACK)
@@ -133,9 +134,10 @@ class SnakeGameAI:
         self.display.blit(text, [0, 0])
         pygame.display.flip()
         
+        
     def _move(self, action):
         clock_wise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
-        index = clock_wise[self.direction]
+        index = clock_wise.index(self.direction)
 
         if np.array_equal(action, [1, 0, 0]) :
             new_direction = clock_wise[index]
