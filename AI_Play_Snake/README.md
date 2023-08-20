@@ -40,5 +40,13 @@ pip install -r requirements.txt
 ```  
 
 ## Usage
-
+```
+python agent.py
+```  
 ## Dependencies
+pygame
+torch
+torchvision
+matplotlib
+ipython
+numpy

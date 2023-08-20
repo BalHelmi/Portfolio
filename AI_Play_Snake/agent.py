@@ -9,7 +9,7 @@ from model import Linear_QNet, QTrainer
 
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
-LR = 0.001
+LR = 0.0001
 
 class Agent:
 
@@ -116,7 +116,7 @@ def train():
             agent.train_long_memory()
             if score > record:
                 record = score
-                # TODO agent.model.save()
+                agent.model.save()
 
             print('Game', agent.n_games, 'Score', score, 'Record:', record)
             plot_scores.append(score)
