@@ -8,7 +8,7 @@ This project is about to teach AI to play sanke using reinforcement learning wit
 
 - [References](#references)
 - [Rules](#Rules)
-- [Demo](#demo)
+- [Report](#report)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dependencies](#dependencies)
@@ -24,7 +24,8 @@ This project is about to teach AI to play sanke using reinforcement learning wit
 2. The goal of the game is to make the snake as long as possible by eating food without crashing into the walls or running into its own body, which will end the game. 
 3. The snake grows in length each time it eats a piece of food.
 
-## Demo
+## Report
+https://docs.google.com/document/d/1LuE8GuE_lenhlUY1_Fsm9z8oaaizipsC7hFQ8JfUDY0/edit?usp=sharing
 
 ## Installation
 Create a virtual environment with conda 
